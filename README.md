@@ -1,4 +1,4 @@
-# tabulator-py
+# geo-anonymizer
 
 [![PyPi](https://img.shields.io/pypi/v/geoanonymizer.svg)](https://pypi.python.org/pypi/geoanonymizer)
 
