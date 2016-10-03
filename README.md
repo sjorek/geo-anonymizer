@@ -24,7 +24,7 @@ Open tabular stream from csv source:
 
 ```python
 from tabulator import Stream
-from geoanonymizer import geoanonymize_tabulator_stream as geoanonymize
+from geoanonymizer import geoanonymize
 
 with Stream('path.csv', headers=1, post_parse=geoanonymize) as stream:
     print(stream.headers) # will print headers from 1 row
@@ -44,8 +44,8 @@ The library provides various of exceptions. Please consult with docstrings.
 
 ## Read more
 
-- [Docstrings](https://github.com/sjorek/geoanonymizer/tree/master/geoanonymizer)
-- [Changelog](https://github.com/sjorek/geoanonymizer/commits/master)
-- [Contribute](CONTRIBUTING.md)
+- [Docstrings](https://github.com/sjorek/geo-anonymizer/tree/master/geoanonymizer)
+- [Changelog](https://github.com/sjorek/geo-anonymizer/commits/master)
+- ~~~[Contribute](CONTRIBUTING.md)~~~
 
 Enjoy!
