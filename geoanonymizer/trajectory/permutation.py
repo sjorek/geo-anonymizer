@@ -9,7 +9,7 @@
 def permutate_swap_locations(cardinality=1.0, *cluster):
     """
     This method needs sets of trajectories as clusters, partitioned using
-    microaggregation.  Limit yourselve to clustering algorithms which try
+    microaggregation.  Limit yourself to clustering algorithms which try
     to minimize the sum of the intra-cluster distances.
 
     The cardinality of each cluster must be approximately k, with k an input
