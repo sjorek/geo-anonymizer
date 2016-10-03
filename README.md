@@ -46,6 +46,6 @@ The library provides various of exceptions. Please consult with docstrings.
 
 - [Docstrings](https://github.com/sjorek/geo-anonymizer/tree/master/geoanonymizer)
 - [Changelog](https://github.com/sjorek/geo-anonymizer/commits/master)
-- ~~~[Contribute](CONTRIBUTING.md)~~~
+- ~~[Contribute](CONTRIBUTING.md)~~
 
 Enjoy!
