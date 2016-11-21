@@ -19,12 +19,8 @@ def read(*paths):
 
 # Prepare
 PACKAGE = 'geoanonymizer'
-INSTALL_REQUIRES = [
-    'tabulator>=0.7,<1.0',
-    'geopy>=1.11,<2.0'
-]
-TESTS_REQUIRE = [
-]
+INSTALL_REQUIRES = []
+TESTS_REQUIRE = []
 README = read('README.md')
 VERSION = read(PACKAGE, 'VERSION')
 PACKAGES = find_packages(exclude=['examples', 'tests'])
@@ -41,10 +37,10 @@ setup(
     extras_require={'develop': TESTS_REQUIRE},
     zip_safe=False,
     long_description=README,
-    description='Consistent interface for anonymizing streams of geo coordinates',
+    description='Consistent interface for anonymizing geo coordinates',
     author='Stephan Jorek',
     author_email='stephan.jorek@gmail.com',
-    url='https://github.com/sjorek/geo-anonymizer',
+    url='https://github.com/sjorek/geoanonymizer.py',
     license='MIT',
     keywords=[
         'frictionless data',
