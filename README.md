@@ -42,6 +42,7 @@ The library provides various of exceptions. Please consult with docstrings.
 
 ## Read more
 
+- [Documentation](http://geoanonymizerpy.readthedocs.io/en/latest/?badge=latest)
 - [Docstrings](https://github.com/sjorek/geoanonymizer.py/tree/master/geoanonymizer)
 - [Changelog](https://github.com/sjorek/geoanonymizer.py/commits/master)
 - ~~[Contribute](CONTRIBUTING.md)~~
