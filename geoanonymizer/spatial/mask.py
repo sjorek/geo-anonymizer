@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""
+u"""
 Functions to mask spatial coordinates.
 
 This implementation is inspired by section 7 of `Ensuring Confidentiality of
@@ -22,7 +22,7 @@ def _random_angle_in_radians():
 
 
 def limit_precision(point, precisions=(None, None, None)):
-    """
+    u"""
     Masked points have a limited precision, hence we cut decimal places.
 
     In the given `precisions` tupel positive integers simply cut decimal places
@@ -108,7 +108,7 @@ def limit_precision(point, precisions=(None, None, None)):
 
 
 def add_vector(point, vector=(None, None, None)):
-    """
+    u"""
     Masked points are displaced by a fixed vector, hence we move the point.
 
     If we define a coordinate like …
@@ -153,7 +153,7 @@ def add_vector(point, vector=(None, None, None)):
 
 
 def displace_on_a_circle(point, radius=0.0):
-    """
+    u"""
     Masked points are placed on a random location on a circle around the
     original location.  Masked points are not placed inside the circle itself.
 
@@ -204,7 +204,7 @@ def displace_on_a_circle(point, radius=0.0):
 
 
 def displace_on_a_sphere(point, radius=0.0):
-    """
+    u"""
      Masked points are placed on a random location on a sphere around the
     original location.  Masked points are not placed inside the sphere itself.
 
@@ -256,7 +256,7 @@ def displace_on_a_sphere(point, radius=0.0):
 
 
 def displace_within_a_circle(point, radius=0.0):
-    """
+    u"""
     Masked locations are placed anywhere within a circular area around the
     original location.  Since every location within the circle is equally
     likely, masked locations are more likely to be placed at larger distances
@@ -315,7 +315,7 @@ def displace_within_a_circle(point, radius=0.0):
 
 
 def displace_within_a_sphere(point, radius=0.0):
-    """
+    u"""
     Masked locations are placed anywhere within a spherical space around the
     original location.  Since every location within the sphere is equally
     likely, masked locations are more likely to be placed at larger distances
@@ -375,7 +375,7 @@ def displace_within_a_sphere(point, radius=0.0):
 def displace_within_a_circular_donut(point,
                                      radius_inner=0.5,
                                      radius_outer=1.0):
-    """
+    u"""
     This technique is similar to random displacement within a circle, but a
     smaller internal circle is utilized within which displacement is not
     allowed.  In effect, this sets a minimum and maximum level for the
@@ -411,7 +411,7 @@ def displace_within_a_circular_donut(point,
 def displace_within_a_spherical_donut(point,
                                       radius_inner=0.5,
                                       radius_outer=1.0):
-    """
+    u"""
     This technique is similar to random displacement within a sphere, but a
     smaller internal sphere is utilized within which displacement is not
     allowed.  In effect, this sets a minimum and maximum level for the
@@ -444,7 +444,7 @@ def displace_within_a_spherical_donut(point,
 
 
 def circular_gaussian_displacement(point, mu=1.0, sigma=1.0):
-    """
+    u"""
     The direction of displacement is random, but the distance follows a
     Gaussian distribution, where `mu` is the mean and `sigma` is the standard
     deviation.  The dispersion of the distribution can be varied based on other
@@ -472,7 +472,7 @@ def circular_gaussian_displacement(point, mu=1.0, sigma=1.0):
 
 
 def spherical_gaussian_displacement(point, mu=1.0, sigma=1.0):
-    """
+    u"""
     The direction of displacement is random, but the distance follows a
     Gaussian distribution, where `mu` is the mean and `sigma` is the standard
     deviation.  The dispersion of the distribution can be varied based on other
@@ -503,7 +503,7 @@ def circular_bimodal_gaussian_displacement(point,
                                            inner_sigma=1.0,
                                            outer_mu=2.0,
                                            outer_sigma=1.0):
-    """
+    u"""
     This is a variation on the Gaussian masking technique, employing a bimodal
     Gaussian distribution for the random distance function.  In effect, this
     approximates donut masking, but with a less uniform probability of
@@ -537,7 +537,7 @@ def spherical_bimodal_gaussian_displacement(point,
                                             inner_sigma=1.0,
                                             outer_mu=2.0,
                                             outer_sigma=1.0):
-    """
+    u"""
     This is a variation on the Gaussian masking technique, employing a bimodal
     Gaussian distribution for the random distance function.  In effect, this
     approximates donut masking, but with a less uniform probability of
