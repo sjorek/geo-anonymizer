@@ -1,8 +1,8 @@
-# geo-anonymizer
+# geoanonymizer.py
 
 [![PyPi](https://img.shields.io/pypi/v/geoanonymizer.svg)](https://pypi.python.org/pypi/geoanonymizer)
 
-Consistent interface for anonymizing streams of geocoordinates.
+Consistent interface for anonymizing geo-coordinates.
 
 ## Features
 
@@ -23,13 +23,10 @@ $ pip install geoanonymizer
 Open tabular stream from csv source:
 
 ```python
-from tabulator import Stream
-from geoanonymizer import geoanonymize
+import geoanonymizer
 
-with Stream('path.csv', headers=1, post_parse=geoanonymize) as stream:
-    print(stream.headers) # will print headers from 1 row
-    for row in stream:
-        print(row)  # will print row values list
+# …
+
 ```
 
 ## Documentation
@@ -44,8 +41,8 @@ The library provides various of exceptions. Please consult with docstrings.
 
 ## Read more
 
-- [Docstrings](https://github.com/sjorek/geo-anonymizer/tree/master/geoanonymizer)
-- [Changelog](https://github.com/sjorek/geo-anonymizer/commits/master)
+- [Docstrings](https://github.com/sjorek/geoanonymizer.py/tree/master/geoanonymizer)
+- [Changelog](https://github.com/sjorek/geoanonymizer.py/commits/master)
 - ~~[Contribute](CONTRIBUTING.md)~~
 
 Enjoy!
