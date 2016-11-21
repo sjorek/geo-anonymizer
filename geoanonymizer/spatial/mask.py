@@ -14,11 +14,11 @@ import random
 
 
 def _random_angle_in_radians():
-    # This version uses human readable degrees, be reduces precision:
+    # This implementation uses human readable degrees with reduced precision
     # random.uniform(0, 360) * math.pi / 180
 
-    # Therefore we simplfy implementaion by calculating directly in radians:
-    return random.uniform(0, 2 * math.pi)
+    # We simplfy the implementation by calculating directly in radians
+    return random.uniform(0, 2) * math.pi
 
 
 def limit_precision(point, precisions=(None, None, None)):
