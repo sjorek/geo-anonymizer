@@ -1,6 +1,7 @@
 # geoanonymizer.py
 
 [![PyPi](https://img.shields.io/pypi/v/geoanonymizer.svg)](https://pypi.python.org/pypi/geoanonymizer)
+[![Docs](https://readthedocs.org/projects/geoanonymizerpy/badge/?version=latest)]http://geoanonymizerpy.readthedocs.io/en/latest/?badge=latest
 
 Consistent interface for anonymizing geo-coordinates.
 
