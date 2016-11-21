@@ -37,7 +37,7 @@ def permutate_swap_locations(cardinality=1.0, *cluster):
     overhead = (size % cardinality)
     if overhead is 0:
         overhead = []
-    else
+    else:
         overhead = cluster[-1 * overhead:]
         cluster  = cluster[0:-1 * overhead]
 
