@@ -5,7 +5,7 @@ Functions to mask spatial coordinates.
 
 This implementation is inspired by section 7 of `Ensuring Confidentiality of
 Geocoded Health Data: Assessing Geographic Masking Strategies for Individual-
-Level Data <https://www.hindawi.com/journals/amed/2014/567049/#sec7>`.
+Level Data <https://www.hindawi.com/journals/amed/2014/567049/#sec7>`_.
 """
 
 from geopy.point import Point
@@ -205,7 +205,7 @@ def displace_on_a_circle(point, radius=0.0):
 
 def displace_on_a_sphere(point, radius=0.0):
     u"""
-     Masked points are placed on a random location on a sphere around the
+    Masked points are placed on a random location on a sphere around the
     original location.  Masked points are not placed inside the sphere itself.
 
     If we define a coordinate like …

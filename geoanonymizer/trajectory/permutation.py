@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
-###
-# Implement the two permutation-based methods `SwapLocations` and
-# `ReachLocations` described in `Anonymization of trajectory data
-# <https://www.unece.org/fileadmin/DAM/stats/documents/ece/ces/ge.46/2011/32_Domingo-Trujillo.pdf>`
-###
+u"""
+Implement the two permutation-based methods `SwapLocations` and
+`ReachLocations` described in `Anonymization of trajectory data
+<https://www.unece.org/fileadmin/DAM/stats/documents/ece/ces/ge.46/2011/32_Domingo-Trujillo.pdf>`_
+"""
 
 def permutate_swap_locations(cardinality=1.0, *cluster):
     """
