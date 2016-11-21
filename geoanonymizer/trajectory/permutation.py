@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-u"""
+"""
 Implement the two permutation-based methods `SwapLocations` and
 `ReachLocations` described in `Anonymization of trajectory data
 <https://www.unece.org/fileadmin/DAM/stats/documents/ece/ces/ge.46/2011/32_Domingo-Trujillo.pdf>`_
@@ -41,7 +41,7 @@ def permutate_swap_locations(cardinality=1.0, *cluster):
         overhead = cluster[-1 * overhead:]
         cluster  = cluster[0:-1 * overhead]
 
-    # … do something with the cluster here …
+    # ... do something with the cluster here ...
     raise NotImplementedError
 
     return (cluster, overhead)

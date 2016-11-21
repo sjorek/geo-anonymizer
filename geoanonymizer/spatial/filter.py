@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-u"""
+"""
 Implement some spatial filters as described in section 7 of `Ensuring
 Confidentiality of Geocoded Health Data: Assessing Geographic Masking
 Strategies for Individual-Level Data
