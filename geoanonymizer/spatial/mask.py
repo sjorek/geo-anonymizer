@@ -187,7 +187,7 @@ def displace_on_a_circle(point, radius=0.0):
 
         >>> random.seed(1)
         >>> displace_on_a_circle(coordinate, 1)
-        Point(0.6643029539301958, 0.7474634341555553, 0.0)
+        Point(0.7474634341555553, 0.6643029539301958, 0.0)
 
     """
 
@@ -200,7 +200,8 @@ def displace_on_a_circle(point, radius=0.0):
     x = math.cos(a) * radius
     y = math.sin(a) * radius
 
-    return add_vector(point, (x, y, 0))
+    # beware that longitude is x and latitude is y !
+    return add_vector(point, (y, x, 0))
 
 
 def displace_on_a_sphere(point, radius=0.0):
@@ -237,7 +238,7 @@ def displace_on_a_sphere(point, radius=0.0):
 
         >>> random.seed(1)
         >>> displace_on_a_sphere(coordinate, 1)
-        Point(-0.5436582607079324, -0.6117158867827159, 0.5746645712253897)
+        Point(-0.6117158867827159, -0.5436582607079324, 0.5746645712253897)
 
     """
 
@@ -252,7 +253,8 @@ def displace_on_a_sphere(point, radius=0.0):
     y = math.sin(a1) * math.sin(a2) * radius
     z = math.cos(a2) * radius
 
-    return add_vector(point, Point(x, y, z))
+    # beware that longitude is x and latitude is y !
+    return add_vector(point, Point(y, x, z))
 
 
 def displace_within_a_circle(point, radius=0.0):
@@ -300,7 +302,7 @@ def displace_within_a_circle(point, radius=0.0):
 
         >>> random.seed(1)
         >>> displace_within_a_circle(coordinate, 1)
-        Point(0.07721437073087664, -0.10996222555283103, 0.0)
+        Point(-0.10996222555283103, 0.07721437073087664, 0.0)
 
     """
 
@@ -358,7 +360,7 @@ def displace_within_a_sphere(point, radius=0.0):
 
         >>> random.seed(1)
         >>> displace_within_a_sphere(coordinate, 1)
-        Point(-0.07692535867829137, 0.10955063884671598, 0.011614508874230087)
+        Point(0.10955063884671598, -0.07692535867829137, 0.011614508874230087)
 
     """
 
@@ -395,11 +397,11 @@ def displace_within_a_circular_donut(point,
 
         >>> random.seed(1)
         >>> displace_within_a_circular_donut(coordinate)
-        Point(0.32593947097813314, -0.4641756357658914, 0.0)
+        Point(-0.4641756357658914, 0.32593947097813314, 0.0)
 
         >>> random.seed(1)
         >>> displace_within_a_circular_donut(coordinate, 0.5, 1.0)
-        Point(0.32593947097813314, -0.4641756357658914, 0.0)
+        Point(-0.4641756357658914, 0.32593947097813314, 0.0)
 
     """
 
@@ -430,11 +432,11 @@ def displace_within_a_spherical_donut(point,
 
         >>> random.seed(1)
         >>> displace_within_a_spherical_donut(coordinate)
-        Point(-0.32471948518229893, 0.4624382343989833, 0.049027491156171304)
+        Point(0.4624382343989833, -0.32471948518229893, 0.049027491156171304)
 
         >>> random.seed(1)
         >>> displace_within_a_spherical_donut(coordinate, 0.5, 1.0)
-        Point(-0.32471948518229893, 0.4624382343989833, 0.049027491156171304)
+        Point(0.4624382343989833, -0.32471948518229893, 0.049027491156171304)
 
     """
 
@@ -458,11 +460,11 @@ def circular_gaussian_displacement(point, mu=1.0, sigma=1.0):
 
         >>> random.seed(1)
         >>> circular_gaussian_displacement(coordinate)
-        Point(0.19779177337662887, -2.279620117247094, 0.0)
+        Point(-2.279620117247094, 0.19779177337662887, 0.0)
 
         >>> random.seed(1)
         >>> circular_gaussian_displacement(coordinate, 1.0, 1.0)
-        Point(0.19779177337662887, -2.279620117247094, 0.0)
+        Point(-2.279620117247094, 0.19779177337662887, 0.0)
 
     """
 
@@ -485,11 +487,11 @@ def spherical_gaussian_displacement(point, mu=1.0, sigma=1.0):
 
         >>> random.seed(1)
         >>> spherical_gaussian_displacement(coordinate)
-        Point(0.19769146198725365, -2.278463993019554, -0.07286551271936394)
+        Point(-2.278463993019554, 0.19769146198725365, -0.07286551271936394)
 
         >>> random.seed(1)
         >>> spherical_gaussian_displacement(coordinate, 1.0, 1.0)
-        Point(0.19769146198725365, -2.278463993019554, -0.07286551271936394)
+        Point(-2.278463993019554, 0.19769146198725365, -0.07286551271936394)
 
     """
 
@@ -517,12 +519,12 @@ def circular_bimodal_gaussian_displacement(point,
 
         >>> random.seed(1)
         >>> circular_bimodal_gaussian_displacement(coordinate)
-        Point(-0.10110949606778825, 3.1735160345853632, 0.0)
+        Point(3.1735160345853632, -0.10110949606778825, 0.0)
 
         >>> random.seed(1)
         >>> circular_bimodal_gaussian_displacement(coordinate,
         ...                                        1.0, 1.0, 2.0, 1.0)
-        Point(-0.10110949606778825, 3.1735160345853632, 0.0)
+        Point(3.1735160345853632, -0.10110949606778825, 0.0)
 
     """
 
@@ -550,12 +552,12 @@ def spherical_bimodal_gaussian_displacement(point,
 
         >>> random.seed(1)
         >>> spherical_bimodal_gaussian_displacement(coordinate)
-        Point(-0.002899644539981792, 0.09101092182341257, -3.173820372380246)
+        Point(0.09101092182341257, -0.002899644539981792, -3.173820372380246)
 
         >>> random.seed(1)
         >>> spherical_bimodal_gaussian_displacement(coordinate,
         ...                                         1.0, 1.0, 2.0, 1.0)
-        Point(-0.002899644539981792, 0.09101092182341257, -3.173820372380246)
+        Point(0.09101092182341257, -0.002899644539981792, -3.173820372380246)
 
     """
 
