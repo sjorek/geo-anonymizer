@@ -26,7 +26,9 @@ Mercator (EPSG 3857) projection system
     The map area of such maps is a square with x and y coordiates both
     between -20,037,508.34 and 20,037,508.34 meters.  As a result data
     north of about 85.1° and south of about -85.1° latitude can not be
-    shown and has been cut off.”
+    shown and has been cut off. …
+
+    This is the right choice for you if you are creating tiled web maps.”
 
     -- from `Projections/Spatial reference systems: Mercator (EPSG 3857)
     <http://openstreetmapdata.com/info/projections#mercator>`_
