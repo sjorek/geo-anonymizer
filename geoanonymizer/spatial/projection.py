@@ -33,8 +33,9 @@ Mercator (EPSG 3857) projection system
     -- from `Projections/Spatial reference systems: Mercator (EPSG 3857)
     <http://openstreetmapdata.com/info/projections#mercator>`_
 
-Hint: iOS tracked coordinates come in WGS84 (EPSG 4326) projection and nearly
-all geomap-services, like google-maps, utilize Mercator (EPSG 3857) projection.
+Hint: Apple™ iOS or Google™ Android tracked coordinates use WGS84 (EPSG 4326)
+projection and nearly all geomap-services, like google-maps, return this too,
+although they're utilizing Mercator (EPSG 3857) projection internally.
 """
 
 import math
