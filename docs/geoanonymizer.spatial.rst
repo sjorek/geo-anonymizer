@@ -20,6 +20,14 @@ geoanonymizer.spatial.mask module
     :undoc-members:
     :show-inheritance:
 
+geoanonymizer.spatial.projection module
+----------------------------------------
+
+.. automodule:: geoanonymizer.spatial.projection
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 
 Module contents
 ---------------
