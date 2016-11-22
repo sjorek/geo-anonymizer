@@ -142,7 +142,7 @@ def add_vector(point, vector=(None, None, None)):
         >>> add_vector(coordinate, (1.0, 1.0, 1.0))
         Point(13.3456, 13.3456, 13.3456)
 
-    Mind that geodetic points with latitude, longitude, and altitude are used.
+    Mind that geodesic points with latitude, longitude, and altitude are used.
     This results in points with limited value range, hence we rotate the points
     around the globe:
 

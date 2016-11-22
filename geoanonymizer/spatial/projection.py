@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 u"""
-Utilities needed to deal with different geodetic projection systems.
+Utilities needed to deal with different geodesic projection systems.
 
 WGS84 (EPSG 4326) projection system
 
