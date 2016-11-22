@@ -11,7 +11,7 @@ from geopy.compat import string_compare, py3k
 class TrajectoryPoint(object):  # pylint: disable=R0903,R0921
     """
     Contains a trajectory point, ie. a point in time.  Can be iterated over as
-    (timestamp<float>, (latitude<float>, longitude<float), altitude<float>)).
+    (timestamp<float>, (latitude<float>, longitude<float>, altitude<float>)).
     Or one can access the properties `timestamp`, `latitude`, `longitude` or
     `altitude`.
     """
