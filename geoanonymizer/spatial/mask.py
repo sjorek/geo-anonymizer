@@ -12,7 +12,7 @@ Functions to mask spatial coordinates.
     Assessing Geographic Masking Strategies for Individual-Level Data
     <https://www.hindawi.com/journals/amed/2014/567049/#sec6>`_
 
-Some implementation are inspired by section 7 of `Ensuring Confidentiality of
+Some implementations are inspired by section 7 of `Ensuring Confidentiality of
 Geocoded Health Data: Assessing Geographic Masking Strategies for Individual-
 Level Data <https://www.hindawi.com/journals/amed/2014/567049/#sec7>`_.
 """
