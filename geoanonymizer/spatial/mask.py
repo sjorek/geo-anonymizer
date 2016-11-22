@@ -1,9 +1,18 @@
 # -*- coding: utf-8 -*-
 
-"""
+u"""
 Functions to mask spatial coordinates.
 
-This implementation is inspired by section 7 of `Ensuring Confidentiality of
+    “Geographic masking is the process of altering the coordinates of point
+    location data to limit the risk of reidentification upon release of the
+    data.  In effect, the purpose of geographic masking is to make it much
+    more difficult to accurately reverse geocode the released data.”
+
+    -- from section 6 of `Ensuring Confidentiality of Geocoded Health Data:
+    Assessing Geographic Masking Strategies for Individual-Level Data
+    <https://www.hindawi.com/journals/amed/2014/567049/#sec6>`_
+
+Some implementation are inspired by section 7 of `Ensuring Confidentiality of
 Geocoded Health Data: Assessing Geographic Masking Strategies for Individual-
 Level Data <https://www.hindawi.com/journals/amed/2014/567049/#sec7>`_.
 """
