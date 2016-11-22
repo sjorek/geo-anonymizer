@@ -6,6 +6,7 @@ Implement the two permutation-based methods `SwapLocations` and
 <https://www.unece.org/fileadmin/DAM/stats/documents/ece/ces/ge.46/2011/32_Domingo-Trujillo.pdf>`_
 """
 
+
 def permutate_swap_locations(cardinality=1.0, *cluster):
     """
     This method needs sets of trajectories as clusters, partitioned using
@@ -14,7 +15,7 @@ def permutate_swap_locations(cardinality=1.0, *cluster):
 
     The cardinality of each cluster must be approximately k, with k an input
     parameter, here: `cardinality`; if the number of trajectories in the
-    `cluster` is not a multiple of k, one or more clusters must absorb the up to
+    `cluster` is not a multiple of k, one or more clusters must absorb up to
     k - 1 remaining trajectories, hence those clusters will have cardinalities
     between k + 1 and 2k − 1.  The purpose of setting k as the cluster size is
     to fulfill trajectory k-anonymity.
@@ -33,18 +34,19 @@ def permutate_swap_locations(cardinality=1.0, *cluster):
     the formed cluster.  As a result, at least one of the trajectories returned
     by this function has all its triples swapped.
     """
-    size     = len(cluster)
+    size = len(cluster)
     overhead = (size % cardinality)
     if overhead is 0:
         overhead = []
     else:
         overhead = cluster[-1 * overhead:]
-        cluster  = cluster[0:-1 * overhead]
+        cluster = cluster[0:-1 * overhead]
 
     # ... do something with the cluster here ...
     raise NotImplementedError
 
     return (cluster, overhead)
+
 
 def permutate_reachable_locations():
     """

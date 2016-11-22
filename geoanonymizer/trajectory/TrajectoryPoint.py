@@ -8,7 +8,7 @@ from geopy.point import Point
 from geopy.compat import string_compare, py3k
 
 
-class TrajectoryPoint(object): # pylint: disable=R0903,R0921
+class TrajectoryPoint(object):  # pylint: disable=R0903,R0921
     """
     Contains a trajectory point, ie. a point in time.  Can be iterated over as
     (timestamp<float>, (latitude<float>, longitude<float), altitude<float>)).
@@ -33,7 +33,8 @@ class TrajectoryPoint(object): # pylint: disable=R0903,R0921
                 "point an unsupported type: %r; use %r or Point",
                 type(point), type(string_compare)
             )
-        self._tuple = (self._timestamp, (self._point[0], self._point[1], self._point[2]))
+        self._tuple = (self._timestamp,
+                       (self._point[0], self._point[1], self._point[2]))
 
     @property
     def timestamp(self):
@@ -109,5 +110,5 @@ class TrajectoryPoint(object): # pylint: disable=R0903,R0921
     def __ne__(self, other):
         return not self.__eq__(other)
 
-    def __len__(self): # pragma: no cover
+    def __len__(self):  # pragma: no cover
         return len(self._tuple)
