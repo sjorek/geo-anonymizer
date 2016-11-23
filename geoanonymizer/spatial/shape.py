@@ -9,14 +9,12 @@ def is_a_vertex_of_polygon(x, y, polygon):
     """
     Check if the `x`/`y` coordinate is a vertex of the `polygon`.
 
-        >>> is_a_vertex_of_polygon(0.0, 0.0,
-        ...                        ((0.0, 0.0), (1.0, 0.0),
-        ...                         (1.0, 1.0), (0.0, 1.0)))
+        >>> polygon = ((0.0, 0.0), (1.0, 0.0), (1.0, 1.0), (0.0, 1.0))
+
+        >>> is_a_vertex_of_polygon(0.0, 0.0, polygon)
         True
 
-        >>> is_a_vertex_of_polygon(0.5, 0.5,
-        ...                        ((0.0, 0.0), (1.0, 0.0),
-        ...                         (1.0, 1.0), (0.0, 1.0)))
+        >>> is_a_vertex_of_polygon(0.5, 0.5, polygon)
         False
 
     Beware:
