@@ -5,16 +5,16 @@ Functions dealing with shapes, especially points and polygons.
 """
 
 
-def is_a_vertex_of_polygon(x, y, polygon):
+def _is_a_vertex_of_polygon(x, y, polygon):
     """
     Check if the `x`/`y` coordinate is a vertex of the `polygon`.
 
         >>> polygon = ((0.0, 0.0), (1.0, 0.0), (1.0, 1.0), (0.0, 1.0))
 
-        >>> is_a_vertex_of_polygon(0.0, 0.0, polygon)
+        >>> _is_a_vertex_of_polygon(0.0, 0.0, polygon)
         True
 
-        >>> is_a_vertex_of_polygon(0.5, 0.5, polygon)
+        >>> _is_a_vertex_of_polygon(0.5, 0.5, polygon)
         False
 
     Beware:
@@ -24,33 +24,33 @@ def is_a_vertex_of_polygon(x, y, polygon):
     return (x, y) in polygon
 
 
-def is_within_bounding_box(x, y, minx, miny, maxx, maxy):
+def _is_within_bounding_box(x, y, minx, miny, maxx, maxy):
     """
     Check if the `x`/`y` coordinate is within the bounding box, defined
     by the `minx`/`miny` coordinate and the `maxx`/`maxy` coordinate.
 
-        >>> is_within_bounding_box(0.5, 0.5, 0.0, 0.0, 1.0, 1.0)
+        >>> _is_within_bounding_box(0.5, 0.5, 0.0, 0.0, 1.0, 1.0)
         True
 
-        >>> is_within_bounding_box(0.5, 0.5, 1.0, 1.0, 0.0, 0.0)
+        >>> _is_within_bounding_box(0.5, 0.5, 1.0, 1.0, 0.0, 0.0)
         True
 
-        >>> is_within_bounding_box(0.5, 0.5, 1.0, 0.0, 0.0, 1.0)
+        >>> _is_within_bounding_box(0.5, 0.5, 1.0, 0.0, 0.0, 1.0)
         True
 
-        >>> is_within_bounding_box(0.5, 0.5, 0.0, 1.0, 1.0, 0.0)
+        >>> _is_within_bounding_box(0.5, 0.5, 0.0, 1.0, 1.0, 0.0)
         True
 
-        >>> is_within_bounding_box(2.0, 2.0, 0.0, 0.0, 1.0, 1.0)
+        >>> _is_within_bounding_box(2.0, 2.0, 0.0, 0.0, 1.0, 1.0)
         False
 
-        >>> is_within_bounding_box(2.0, 2.0, 1.0, 1.0, 0.0, 0.0)
+        >>> _is_within_bounding_box(2.0, 2.0, 1.0, 1.0, 0.0, 0.0)
         False
 
-        >>> is_within_bounding_box(2.0, 2.0, 1.0, 0.0, 0.0, 1.0)
+        >>> _is_within_bounding_box(2.0, 2.0, 1.0, 0.0, 0.0, 1.0)
         False
 
-        >>> is_within_bounding_box(2.0, 2.0, 0.0, 1.0, 1.0, 0.0)
+        >>> _is_within_bounding_box(2.0, 2.0, 0.0, 1.0, 1.0, 0.0)
         False
 
     Beware:
@@ -63,24 +63,24 @@ def is_within_bounding_box(x, y, minx, miny, maxx, maxy):
     )
 
 
-def is_on_line(x, y, ax, ay, bx, by):
+def _is_on_line(x, y, ax, ay, bx, by):
     """
     Check if point `x`/`y` is on the line segment from `ax`/`ay` to `bx`/`by`
     or the degenerate case that all 3 points are coincident.
 
-        >>> is_on_line(0.5, 0.5, 0.0, 0.0, 1.0, 1.0)
+        >>> _is_on_line(0.5, 0.5, 0.0, 0.0, 1.0, 1.0)
         True
 
-        >>> is_on_line(0.0, 0.0, 0.0, 0.0, 1.0, 1.0)
+        >>> _is_on_line(0.0, 0.0, 0.0, 0.0, 1.0, 1.0)
         True
 
-        >>> is_on_line(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
+        >>> _is_on_line(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
         True
 
-        >>> is_on_line(0.0, 0.5, 0.0, 0.0, 1.0, 1.0)
+        >>> _is_on_line(0.0, 0.5, 0.0, 0.0, 1.0, 1.0)
         False
 
-        >>> is_on_line(0.5, 0.0, 0.0, 0.0, 1.0, 1.0)
+        >>> _is_on_line(0.5, 0.0, 0.0, 0.0, 1.0, 1.0)
         False
 
     """
@@ -89,43 +89,43 @@ def is_on_line(x, y, ax, ay, bx, by):
              (ay <= y <= by or by <= y <= ay)))
 
 
-def is_inside_polygon(x, y, polygon):
+def _is_inside_polygon(x, y, polygon):
     """
     Check if the given `x`/`y` coordinate is inside the given `polygon`.
 
         >>> polygon = ((0.0, 0.0), (1.0, 0.0), (1.0, 1.0), (0.0, 1.0))
 
-        >>> is_inside_polygon(0.0, 0.0, polygon)
+        >>> _is_inside_polygon(0.0, 0.0, polygon)
         True
 
-        >>> is_inside_polygon(0.0, 0.5, polygon)
+        >>> _is_inside_polygon(0.0, 0.5, polygon)
         ... # Attention: edge case, this should be True
         False
 
-        >>> is_inside_polygon(0.5, 0.0, polygon)
+        >>> _is_inside_polygon(0.5, 0.0, polygon)
         ... # Attention: edge case, this should be True
         False
 
-        >>> is_inside_polygon(0.5, 0.5, polygon)
+        >>> _is_inside_polygon(0.5, 0.5, polygon)
         True
 
-        >>> is_inside_polygon(1.0, 0.5, polygon)
+        >>> _is_inside_polygon(1.0, 0.5, polygon)
         True
 
-        >>> is_inside_polygon(0.5, 1.0, polygon)
+        >>> _is_inside_polygon(0.5, 1.0, polygon)
         True
 
-        >>> is_inside_polygon(1.0, 1.0, polygon)
+        >>> _is_inside_polygon(1.0, 1.0, polygon)
         ... # Attention: edge case, this should be True
         False
 
-        >>> is_inside_polygon(2.0, 0.0, polygon)
+        >>> _is_inside_polygon(2.0, 0.0, polygon)
         False
 
-        >>> is_inside_polygon(0.0, 2.0, polygon)
+        >>> _is_inside_polygon(0.0, 2.0, polygon)
         False
 
-        >>> is_inside_polygon(-1.0, -1.0, polygon)
+        >>> _is_inside_polygon(-1.0, -1.0, polygon)
         False
 
     Beware:
@@ -230,7 +230,7 @@ def is_on_polygon(x, y, polygon, bounds=None):
         - latitude is `y` and longitude is `x`
         - coordinate and `polygon` must use the same geodesic projection system
     """
-    if is_a_vertex_of_polygon(x, y, polygon):
+    if _is_a_vertex_of_polygon(x, y, polygon):
         return True
 
     if bounds is None:
@@ -244,21 +244,21 @@ def is_on_polygon(x, y, polygon, bounds=None):
     else:
         minx, miny, maxx, maxy = bounds
 
-    if not is_within_bounding_box(x, y, minx, miny, maxx, maxy):
+    if not _is_within_bounding_box(x, y, minx, miny, maxx, maxy):
         return False
 
-    if is_inside_polygon(x, y, polygon):
+    if _is_inside_polygon(x, y, polygon):
         return True
 
     # used a few lines below
     _length = len(polygon)
 
-    # make sure point is not an egde case from is_inside_polygon
+    # make sure point is not an egde case from _is_inside_polygon
     for index, point in enumerate(polygon):
         A = point
         B = polygon[(index + 1) % _length]
 
-        if is_on_line(x, y, A[0], A[1], B[0], B[1]):
+        if _is_on_line(x, y, A[0], A[1], B[0], B[1]):
             return True
 
     return False
