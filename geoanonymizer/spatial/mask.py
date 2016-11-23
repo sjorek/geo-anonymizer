@@ -263,7 +263,7 @@ def displace_on_a_sphere(point, radius=0.0):
     z = math.cos(a2) * radius
 
     # beware that longitude is x and latitude is y !
-    return add_vector(point, Point(y, x, z))
+    return add_vector(point, (y, x, z))
 
 
 def displace_within_a_circle(point, radius=0.0):
