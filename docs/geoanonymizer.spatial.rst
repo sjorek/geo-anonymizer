@@ -28,6 +28,14 @@ geoanonymizer.spatial.projection module
     :undoc-members:
     :show-inheritance:
 
+geoanonymizer.spatial.shape module
+----------------------------------
+
+.. automodule:: geoanonymizer.spatial.shape
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 
 Module contents
 ---------------
