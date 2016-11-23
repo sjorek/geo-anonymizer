@@ -58,8 +58,8 @@ def _is_within_bounding_box(x, y, minx, miny, maxx, maxy):
         - All parameters must use the same geodesic projection system
     """
     return (
-        x >= min(minx, maxx) and x <= max(minx, maxx) and
-        y >= min(miny, maxy) and y <= max(miny, maxy)
+        min(minx, maxx) <= x <= max(minx, maxx) and
+        min(miny, maxy) <= y <= max(miny, maxy)
     )
 
 
