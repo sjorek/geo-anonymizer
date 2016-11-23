@@ -10,7 +10,7 @@ Functions to filter spatial coordinates.
     lakes) to ensure that no masked locations appear in areas which are
     obviously uninhabited.”
 
-    -- from section 7 of `Ensuring Confidentiality of Geocoded Health Data:
+    -- from `chapter 7 of Ensuring Confidentiality of Geocoded Health Data:
     Assessing Geographic Masking Strategies for Individual-Level Data
     <https://www.hindawi.com/journals/amed/2014/567049/#sec7>`_
 
